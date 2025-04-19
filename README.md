@@ -31,4 +31,11 @@
 - Make emails for signing up.
 - Make a list of top users.
 
+
+# Stuff
+
+**Quick Note:**
 Maybe I finish this, maybe not. We'll see. I want to learn how to code, so the end result isn't the main thing. Thanks for reading.
+
+**Stuff i used in this project:**
+https://lucide.dev/icons/ for Icons 
