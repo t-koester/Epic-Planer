@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-family: 'Press Start 2P', monospace;
+    position: relative; /* Wichtig für die absolute Positionierung von .user-info */
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.logo-name > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+.name {
+    margin: 0;
+    flex-grow: 1;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.logo-name > div:first-child h1 {
+    margin: 0;
+    flex-grow: 1;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.top-navigation {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
+
+.top-navigation a {
+    text-decoration: none;
+    color: white;
+    background-color: #5d5c64;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.top-navigation a:hover {
+    background-color: #5d5c64;
+    border-color: #5d5c64;
+}
+
+
+.user-info {
+    display: flex;
+    align-items: flex-start; /* Avatar oben ausrichten */
+    gap: 10px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+ 
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column; /* Stapelt Username und Level-Info vertikal */
+    align-items: flex-end; /* Richtet Username und Level-Info rechts aus */
+}
+
+.level-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.level-bar-placeholder {
+    background-color: #ccc;
+    width: 100px;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.level-progress {
+    background-color: #1e8d08;
+    height: 100%;
+    width: 50%;
+    border-radius: 4px;
+}
+
+.username {
+    font-size: 1em;
+    text-align: right;
+}
+
+.user-info img { 
+    width: 40px;  
+    height: 40px;  
+    object-fit: cover; 
+    border-radius: 50%; 
+    vertical-align: top; 
+}
+
+.task-dashboard-container {
+    font-size: 1.5em;
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 30%; 
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+    margin-left: 50px;
+    font-family: 'VT323'
+    
+}
+
+.tasks-display-dashboard {
+    display: block; 
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: none; 
+}
+
+.task-dashboard-container {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 30%; 
+    margin-left: 0; 
+    margin-right: auto; 
+    float: left; 
+}
