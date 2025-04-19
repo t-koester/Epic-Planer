@@ -39,3 +39,4 @@
 
 **Stuff i used in this project:**
 - https://lucide.dev/icons/ for Icons 
+- I used https://gemini.google.com to create the placeholder for a Background designed my a real Artist.
