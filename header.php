@@ -15,7 +15,7 @@
 </div> 
 
 <div class="user-info">
-        <img src="images/person-standing.png" alt="User Avatar">
+        <img src="images/circle-user-round.png" alt="User Avatar">
         <div class="user-details">
             <span class="username">Max Mustermann</span>
             <div class="level-info">

@@ -20,4 +20,5 @@
         <input type="checkbox" id="task5">
         <label for="task5">Task 5 Placeholder</label>
     </div>
+    <button class="tasks-details-button">Manage Tasks</button>
 </div>

@@ -17,7 +17,7 @@
 # What's Next?
 
 **How I Want to Start:**
-- Make a basic look with boxes.
+- ~~Make a basic look with boxes.~~ *Done*
 - Make a place to save info (database).
 - Make login and sign-up.
 - Start making the task manager.

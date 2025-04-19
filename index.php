@@ -5,6 +5,6 @@
 <html>
 
 <body>
-<?php include 'main.php' ?>
+<?php include 'dashboard.php' ?>
 </body>
 </html>
