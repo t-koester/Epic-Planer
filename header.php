@@ -1,3 +1,8 @@
+<?php
+session_start();
+$loggedInUsername = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Gast';
+?>
+
 <header class="header">
     <div class="logo-name">
         <div>
@@ -12,12 +17,12 @@
   <a href="http://localhost:8000/Sinum.php">Notes</a>
   <a href="http://localhost:8000/Impsum.php">Fokus</a>
   <a href="http://localhost:8000/Loren.php">Exams</a>
-</div> 
+</div>
 
 <div class="user-info">
         <img src="images/circle-user-round.png" alt="User Avatar">
         <div class="user-details">
-            <span class="username">Max Mustermann</span>
+            <span class="username"><?php echo $loggedInUsername; ?></span>
             <div class="level-info">
                 <div class="level-bar-placeholder">
                     <div class="level-progress" style="width: 50%;"></div>
@@ -26,6 +31,4 @@
             </div>
         </div>
     </div>
-</header>
-
 </header>
