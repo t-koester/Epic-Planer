@@ -20,7 +20,7 @@
 **How I Want to Start:**
 - ~~Make a basic look with boxes.~~ *Done*
 - ~~Make a place to save info (database).~~ *Done*
-- Make login and sign-up.
+- ~~Make login and sign-up.~~ *Done*
 - ~~Start making the task manager.~~ *Done*
 - Let users plan their classes.
 - Let users put exams on a calendar.
@@ -35,13 +35,19 @@
 ## Features
 
 **Task Manager**
-*  Displays the user's current tasks on the dashboard.
-*  Quickly add new tasks via an input field and button.
-*  Checkboxes allow marking tasks as done.
-*  Completed tasks are displayed with a strikethrough.
-*  Tasks are saved in a local `task_db.json` file.
-*  Once a day (on the first login), completed tasks are automatically removed.
-*  Simple CSS (`style.css`) for basic UI.
+-  Displays the user's current tasks on the dashboard.
+-  Quickly add new tasks via an input field and button.
+-  Checkboxes allow marking tasks as done.
+-  Completed tasks are displayed with a strikethrough.
+-  Tasks are saved in a local `task_db.json` file.
+-  Once a day (on the first login), completed tasks are automatically removed.
+-  Simple CSS (`style.css`) for basic UI.
+
+**Login & Register System**
+- The front-end interface (`login.php` and associated CSS) allowing users to enter their credentials and log in.
+- The front-end interface (`register.php` and associated CSS) enabling new users to provide their information and create an account.
+- Backend logic (using PHP sessions or similar mechanisms) to create, manage, and destroy user sessions after successful login.
+
 
 # Stuff
 
