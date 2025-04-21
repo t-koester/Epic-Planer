@@ -1,23 +1,20 @@
 <?php
-// tasks-dashboard.php
 
-// Starte die Session (sollte bereits in index.php erfolgt sein, aber zur Sicherheit)
 session_start();
 
-// Überprüfe, ob der Benutzer eingeloggt ist
+
 if (!isset($_SESSION['user_id'])) {
-    echo "<p>Benutzer nicht eingeloggt. Bitte <a href='login.php'>einloggen</a>.</p>";
+    echo "<p>User not logged in. Please <a href='login.php'>log in</a>.</p>";
     exit();
 }
 
-// Benutzer-ID aus der Session holen
 $userId = $_SESSION['user_id'];
 
-// Pfad zur Aufgaben-Datenbank-Datei
+
 $taskDbFile = __DIR__ . '/task_db.json';
 $userTasks = [];
 
-// Lese die vorhandenen Aufgaben aus der Datenbank
+
 if (file_exists($taskDbFile)) {
     $tasksData = json_decode(file_get_contents($taskDbFile), true);
     if (isset($tasksData[$userId])) {
@@ -31,7 +28,7 @@ function htmlspecialchars_utf8($str) {
 ?>
 
 <div class="task-dashboard-container">
-    <a class="tasks-display-dashboard">Deine heutigen Aufgaben:</a>
+    <a class="tasks-display-dashboard">Your Tasks Today:</a>
     <div id="task-list">
         <?php if (!empty($userTasks)): ?>
             <?php foreach ($userTasks as $index => $task): ?>
@@ -47,13 +44,13 @@ function htmlspecialchars_utf8($str) {
                 </div>
             <?php endforeach; ?>
         <?php else: ?>
-            <p>Noch keine Aufgaben.</p>
+            <p>No tasks yet.</p>
         <?php endif; ?>
     </div>
 
     <div class="add-task-container">
-        <input type="text" id="newTask" placeholder="Neue Aufgabe eingeben...">
-        <button class="add-task-button" onclick="addTask()">Aufgabe hinzufügen</button>
+        <input type="text" id="newTask" placeholder="Add a new Task...">
+        <button class="add-task-button" onclick="addTask()">Add Task</button>
     </div>
 </div>
 
@@ -80,7 +77,7 @@ function addTask() {
         })
         .then(data => {
             if (data.success) {
-                console.log('Aufgabe erfolgreich hinzugefügt:', data.task);
+                console.log('Task added successfully:', data.task);
                 const taskList = document.getElementById('task-list');
                 const newTaskDiv = document.createElement('div');
                 newTaskDiv.classList.add('task-placeholder');
@@ -93,18 +90,18 @@ function addTask() {
                 taskList.appendChild(newTaskDiv);
                 newTaskInput.value = "";
             } else if (data.error) {
-                alert('Fehler beim Hinzufügen der Aufgabe: ' + data.error);
+                alert('Error adding task: ' + data.error);
             } else {
-                console.error('Unerwartete Antwort vom Server:', data);
-                alert('Unerwarteter Fehler beim Hinzufügen der Aufgabe.');
+                console.error('Unexpected response from server:', data);
+                alert('Unexpected error adding task.');
             }
         })
         .catch(error => {
-            console.error('Fehler beim Hinzufügen der Aufgabe:', error);
-            alert('Fehler beim Hinzufügen der Aufgabe: ' + error.message);
+            console.error('Error adding task:', error);
+            alert('Error adding task: ' + error.message);
         });
     } else {
-        alert("Bitte gib eine Aufgabenbeschreibung ein.");
+        alert("Please enter a task description.");
     }
 }
 
@@ -129,7 +126,7 @@ function toggleTaskCompletion(checkbox) {
     .then(response => response.json())
     .then(data => {
         if (data.error) {
-            alert('Fehler beim Aktualisieren des Aufgabenstatus: ' + data.error);
+            alert('Error updating task status: ' + data.error);
             checkbox.checked = !isChecked;
             if (!isChecked) {
                 label.classList.add('completed');
@@ -137,12 +134,12 @@ function toggleTaskCompletion(checkbox) {
                 label.classList.remove('completed');
             }
         } else {
-            console.log('Aufgabenstatus erfolgreich aktualisiert:', taskIndex, isChecked);
+            console.log('Task status updated successfully:', taskIndex, isChecked);
         }
     })
     .catch(error => {
-        console.error('Netzwerkfehler beim Aktualisieren des Aufgabenstatus:', error);
-        alert('Netzwerkfehler beim Aktualisieren des Aufgabenstatus.');
+        console.error('Network error updating task status:', error);
+        alert('Network error updating task status.');
         checkbox.checked = !isChecked;
         if (!isChecked) {
             label.classList.add('completed');

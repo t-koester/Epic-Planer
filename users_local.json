@@ -25,5 +25,19 @@
         "email": "anothertest4@s.de",
         "password": "$2y$10$J86XcdKdrJ3q\/ko9z4dxbeZf9tgNk1FYSBqsk7TP5ql3M9pk1j1Ny",
         "level": 1
+    },
+    "68065d363ceec": {
+        "id": "68065d363ceec",
+        "username": "ggsgg4",
+        "email": "ggsgg4@s.de",
+        "password": "$2y$10$8ELZZ4Ny793a5rPdPmQJsO5GNZpRGZeZ51cSf5lXhkKZ73b.EjHZC",
+        "level": 1
+    },
+    "68066e67ca2ec": {
+        "id": "68066e67ca2ec",
+        "username": "alice",
+        "email": "alice@de.de",
+        "password": "$2y$10$p2DWX3oPydRpLXmKzOiT3OQOZuaCdIepUfhmwoENcJ\/h9uZ8RDnw6",
+        "level": 1
     }
 }

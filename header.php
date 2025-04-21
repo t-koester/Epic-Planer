@@ -17,6 +17,7 @@ $loggedInUsername = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['u
   <a href="http://localhost:8000/Sinum.php">Notes</a>
   <a href="http://localhost:8000/Impsum.php">Fokus</a>
   <a href="http://localhost:8000/Loren.php">Exams</a>
+  <a href="http://localhost:8000/Loren.php">Life</a>
 </div>
 
 <div class="user-info">

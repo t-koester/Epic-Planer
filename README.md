@@ -22,9 +22,9 @@
 - ~~Make a place to save info (database).~~ *Done*
 - ~~Make login and sign-up.~~ *Done*
 - ~~Start making the task manager.~~ *Done*
+- Make a level system.
 - Let users plan their classes.
 - Let users put exams on a calendar.
-- Make a level system.
 - Use a tool (maybe AI) to give quests.
 - Make a notes tool and maybe connect to apps like Good Notes.
 - Make a focus mode with Spotify.
