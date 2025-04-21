@@ -4,6 +4,7 @@
 - Small project to learn PHP, HTML, JS, and CSS better.
 - Maybe help my studying.
 - Maybe help other students too.
+- Learn how to use AI for error handeling and styling of a Website.
 
 **What Will It Do?**
 - Organize studies.

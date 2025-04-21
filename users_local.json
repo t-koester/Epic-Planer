@@ -1,8 +1,29 @@
 {
     "user1": {
-      "password": "user1"
+        "password": "user1"
     },
     "user2": {
-      "password": "testpassword"
+        "password": "testpassword"
+    },
+    "68063c428c516": {
+        "id": "68063c428c516",
+        "username": "user3",
+        "email": "user3@mail.de",
+        "password": "$2y$10$Wh20PoPd3VSX.8993OWuuuKOLRh0c53zT7wPovdGrbOx5FEDKlq1K",
+        "level": 1
+    },
+    "68064a4008b8b": {
+        "id": "68064a4008b8b",
+        "username": "testuser4",
+        "email": "testuser4@mail.de",
+        "password": "$2y$10$wQsSX7JxOEdKA\/6dt9tnpO50sESKtdrPVt4NSSVUtbdcqZqopKpli",
+        "level": 1
+    },
+    "68064b6b033c6": {
+        "id": "68064b6b033c6",
+        "username": "anothertest4",
+        "email": "anothertest4@s.de",
+        "password": "$2y$10$J86XcdKdrJ3q\/ko9z4dxbeZf9tgNk1FYSBqsk7TP5ql3M9pk1j1Ny",
+        "level": 1
     }
-  }
+}

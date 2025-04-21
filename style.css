@@ -363,3 +363,107 @@ body {
     color: #aaa; 
     background-color: transparent; 
 }
+
+body.auth-body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background-image: url('images/tavern_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0; 
+}
+
+
+.auth-container {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #333; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    color: #f0f0f0; 
+    font-family: 'VT323'
+}
+
+.auth-container .auth-title {
+    text-align: center;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.auth-container .error-message {
+    color: #dc3545; 
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.auth-container .success-message {
+    color: #28a745; 
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.auth-container .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ddd;
+    font-size: 1em;
+}
+
+.auth-container .auth-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #f0f0f0;
+    font-size: 1em;
+}
+
+.auth-container .auth-input::placeholder {
+    color: #aaa; 
+}
+
+.auth-container .auth-button {
+    background-color: #333; 
+    color: #007bff; 
+    padding: 10px 15px;
+    border: 1px solid #007bff; 
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.auth-container .auth-button:hover {
+    background-color: #555; 
+}
+
+.auth-container .auth-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.auth-container .auth-link a {
+    color: #007bff; 
+    text-decoration: none;
+}
+
+.auth-container .auth-link a:hover {
+    text-decoration: underline;
+}
