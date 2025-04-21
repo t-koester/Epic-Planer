@@ -10,7 +10,8 @@
         "username": "user3",
         "email": "user3@mail.de",
         "password": "$2y$10$Wh20PoPd3VSX.8993OWuuuKOLRh0c53zT7wPovdGrbOx5FEDKlq1K",
-        "level": 1
+        "level": 33,
+        "xp": 50702.5
     },
     "68064a4008b8b": {
         "id": "68064a4008b8b",
@@ -35,9 +36,10 @@
     },
     "68066e67ca2ec": {
         "id": "68066e67ca2ec",
-        "username": "alice",
-        "email": "alice@de.de",
+        "username": "testuser",
+        "email": "testuser@de.de",
         "password": "$2y$10$p2DWX3oPydRpLXmKzOiT3OQOZuaCdIepUfhmwoENcJ\/h9uZ8RDnw6",
-        "level": 1
+        "level": 3,
+        "xp": 502.5
     }
 }

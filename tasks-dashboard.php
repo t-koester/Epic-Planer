@@ -133,8 +133,30 @@ function toggleTaskCompletion(checkbox) {
             } else {
                 label.classList.remove('completed');
             }
+        } else if (data.xp_updated) {
+            console.log('Task status updated successfully, XP updated:', data.new_xp);
+            // Trigger Level-Update nach erfolgreicher XP-Aktualisierung
+            fetch('update_level.php')
+                .then(levelResponse => levelResponse.json())
+                .then(levelData => {
+                    if (levelData.level_updated) {
+                        console.log('Level updated:', levelData.new_level);
+                        const levelPlaceholderHeader = document.querySelector('.header .level-placeholder');
+                        if (levelPlaceholderHeader) {
+                            levelPlaceholderHeader.textContent = 'Level ' + levelData.new_level;
+                        }
+                        // Aktualisiere auch die Fortschrittsanzeige und XP bis zum nächsten Level im Header (falls nötig)
+                        // Dies erfordert ggf. erneutes Abrufen der Benutzerdaten oder clientseitige Berechnung
+                        window.location.reload(); // Einfachste Lösung für sofortige Anzeige
+                    } else if (levelData.error) {
+                        console.error('Error updating level:', levelData.error);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching level update:', error);
+                });
         } else {
-            console.log('Task status updated successfully:', taskIndex, isChecked);
+            console.log('Task status updated successfully (no XP change):', data);
         }
     })
     .catch(error => {
