@@ -18,9 +18,9 @@
 
 **How I Want to Start:**
 - ~~Make a basic look with boxes.~~ *Done*
-- Make a place to save info (database).
+- ~~Make a place to save info (database).~~ *Done*
 - Make login and sign-up.
-- Start making the task manager.
+- ~~Start making the task manager.~~ *Done*
 - Let users plan their classes.
 - Let users put exams on a calendar.
 - Make a level system.
@@ -31,6 +31,17 @@
 - Make emails for signing up.
 - Make a list of top users.
 
+## Features
+
+**Task Manager**
+* **View Tasks:** Displays the user's current tasks on the dashboard.
+* **Add Tasks:** Quickly add new tasks via an input field and button.
+* **Mark as Complete:** Checkboxes allow marking tasks as done.
+* **Visual Feedback:** Completed tasks are displayed with a strikethrough.
+* **Persistent Storage:** Tasks are saved in a local `task_db.json` file.
+* **Automatic Daily Cleanup:** Once a day (on the first login), completed tasks are automatically removed.
+* **Optional Local User Management:** Basic, file-based user data (`users_local.json`) with auto-login for a default user.
+* **Basic Styling:** Simple CSS (`style.css`) for basic UI.
 
 # Stuff
 
