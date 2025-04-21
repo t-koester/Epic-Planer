@@ -316,3 +316,50 @@ body {
 .goto-classes-button:hover {
     background-color: #555;
 }
+
+.add-task-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 5px;
+    border: 1px solid #555; 
+}
+
+#newTask {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #555; 
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #eee; 
+}
+
+.add-task-button {
+    padding: 10px 15px;
+    background-color: #555; 
+    color: #eee; 
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-button:hover {
+    background-color: #777; 
+}
+
+.add-task-container.focused {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: #aaa; 
+    box-shadow: 0 0 5px rgba(170, 170, 170, 0.5); 
+}
+
+#newTask::placeholder {
+    color: #aaa; 
+    background-color: transparent; 
+}
