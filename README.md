@@ -34,14 +34,13 @@
 ## Features
 
 **Task Manager**
-* **View Tasks:** Displays the user's current tasks on the dashboard.
-* **Add Tasks:** Quickly add new tasks via an input field and button.
-* **Mark as Complete:** Checkboxes allow marking tasks as done.
-* **Visual Feedback:** Completed tasks are displayed with a strikethrough.
-* **Persistent Storage:** Tasks are saved in a local `task_db.json` file.
-* **Automatic Daily Cleanup:** Once a day (on the first login), completed tasks are automatically removed.
-* **Optional Local User Management:** Basic, file-based user data (`users_local.json`) with auto-login for a default user.
-* **Basic Styling:** Simple CSS (`style.css`) for basic UI.
+*  Displays the user's current tasks on the dashboard.
+*  Quickly add new tasks via an input field and button.
+*  Checkboxes allow marking tasks as done.
+*  Completed tasks are displayed with a strikethrough.
+*  Tasks are saved in a local `task_db.json` file.
+*  Once a day (on the first login), completed tasks are automatically removed.
+*  Simple CSS (`style.css`) for basic UI.
 
 # Stuff
 
