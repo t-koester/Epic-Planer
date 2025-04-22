@@ -3,8 +3,10 @@
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    http_response_code(403);
-    echo json_encode(['error' => 'User not logged in.']);
+    echo '<div class="error-message">';
+    echo '<p class="error-title">Fehler</p>';
+    echo '<p>User not logged in. Please <a href="login.php">log in</a>.</p>';
+    echo '</div>';
     exit();
 }
 

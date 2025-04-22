@@ -2,8 +2,12 @@
 
 session_start();
 
+
 if (!isset($_SESSION['user_id'])) {
-    echo "<p>User not logged in. Please <a href='login.php'>log in</a>.</p>";
+    echo '<div class="not-logged-in-container">';
+    echo '<p class="not-logged-in-message">User not logged in.</p>';
+    echo '<p class="not-logged-in-link"><a href="login.php">Please log in</a>.</p>';
+    echo '</div>';
     exit();
 }
 
@@ -59,7 +63,7 @@ $xpToNextLevel = max(0, $nextLevelRequiredXp - $userXp);
     </div>
 
 <div class="top-navigation">
-  <a href="http://localhost:8000/Impsum.php">Classes</a>
+  <a href="http://localhost:8000/timetable.php ">Classes</a>
   <a href="http://localhost:8000/Loren.php">Tasks</a>
   <a href="http://localhost:8000/Sinum.php">Notes</a>
   <a href="http://localhost:8000/Impsum.php">Fokus</a>

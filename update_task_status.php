@@ -46,6 +46,7 @@ if (isset($tasksData[$userId][$taskIndex])) {
 
     $xpUpdated = false;
     $newXp = 0;
+    $newLevel = null; // Initialisiere $newLevel
 
     if ($completedStatus === 'yes' && !$task['xp_awarded'] && isset($usersData[$userId])) {
         $earnedXp = round($xpPerTask * 2) / 2;
@@ -59,6 +60,13 @@ if (isset($tasksData[$userId][$taskIndex])) {
             http_response_code(500);
             echo json_encode(['error' => 'Error writing to users database (XP update).']);
             exit();
+        }
+
+        // Rufe das Level-Update-Skript auf
+        $levelUpdateResponse = @file_get_contents('update_level.php');
+        if ($levelUpdateResponse !== FALSE) {
+            $levelData = json_decode($levelUpdateResponse, true);
+            $newLevel = $levelData['new_level'] ?? null;
         }
     }
 
@@ -74,6 +82,9 @@ if (isset($tasksData[$userId][$taskIndex])) {
     if ($xpUpdated) {
         $response['xp_updated'] = true;
         $response['new_xp'] = $newXp;
+        if ($newLevel !== null) {
+            $response['new_level'] = $newLevel;
+        }
     }
     echo json_encode($response);
     exit();
