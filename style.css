@@ -487,20 +487,19 @@ body.auth-body {
     margin-bottom: 5px;
 }
 
-/* Set Up Classes Styles */
 .setup-classes-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9; /* Adjust to your site's background */
-    border: 1px solid #ddd; /* Adjust to your site's border style */
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adjust shadow if needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .setup-classes-container h2 {
     text-align: center;
-    color: #333; /* Adjust to your site's heading color */
+    color: #333; 
     margin-bottom: 20px;
 }
 
@@ -511,37 +510,37 @@ body.auth-body {
 }
 
 .setup-timetable th, .setup-timetable td {
-    border: 1px solid #ccc; /* Adjust to your site's table border */
+    border: 1px solid #ccc; 
     padding: 10px;
     text-align: center;
 }
 
 .setup-timetable th {
-    background-color: #eee; /* Adjust to your site's table header background */
+    background-color: #eee; 
     font-weight: bold;
-    color: #333; /* Adjust to your site's table header text color */
+    color: #333; 
 }
 
 .setup-timetable .time-slot {
-    background-color: #f0f0f0; /* Adjust to your site's row highlight */
+    background-color: #f0f0f0;
     font-weight: bold;
-    color: #333; /* Adjust to your site's text color */
+    color: #333; 
 }
 
 .setup-timetable input[type="text"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 5px;
-    border: 1px solid #ddd; /* Adjust to your site's input border */
+    border: 1px solid #ddd;
     border-radius: 3px;
     box-sizing: border-box;
     font-size: 0.9em;
-    color: #333; /* Adjust to your input text color */
-    background-color: #fff; /* Adjust to your input background */
+    color: #333;
+    background-color: #fff; 
 }
 
 .setup-classes-container .save-classes-button {
-    background-color: #4CAF50; /* Adjust to your site's primary button color */
+    background-color: #4CAF50; 
     color: white;
     padding: 10px 15px;
     border: none;
@@ -551,13 +550,13 @@ body.auth-body {
 }
 
 .setup-classes-container .save-classes-button:hover {
-    background-color: #45a049; /* Adjust to your site's primary button hover color */
+    background-color: #45a049; 
 }
 
 .setup-classes-container p a {
     display: block;
     margin-top: 10px;
-    color: #337ab7; /* Adjust to your site's link color */
+    color: #337ab7;
     text-decoration: none;
     text-align: center;
 }
@@ -566,20 +565,20 @@ body.auth-body {
     text-decoration: underline;
 }
 
-/* Timetable Styles */
+
 .timetable-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9; /* Adjust to your site's background */
-    border: 1px solid #ddd; /* Adjust to your site's border style */
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adjust shadow if needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .timetable-title {
     text-align: center;
-    color: #333; /* Adjust to your site's heading color */
+    color: #333; 
     margin-bottom: 20px;
 }
 
@@ -590,38 +589,38 @@ body.auth-body {
 }
 
 .timetable th, .timetable td {
-    border: 1px solid #ccc; /* Adjust to your site's table border */
+    border: 1px solid #ccc; 
     padding: 10px;
     text-align: center;
 }
 
 .timetable th {
-    background-color: #eee; /* Adjust to your site's table header background */
+    background-color: #eee; 
     font-weight: bold;
-    color: #333; /* Adjust to your site's table header text color */
+    color: #333; 
 }
 
 .time-slot {
-    background-color: #f0f0f0; /* Adjust to your site's row highlight */
+    background-color: #f0f0f0; 
     font-weight: bold;
-    color: #333; /* Adjust to your site's text color */
+    color: #333; 
 }
 
 .subject {
     display: block;
     font-weight: bold;
-    color: #337ab7; /* Adjust to your site's link/accent color */
+    color: #337ab7;
 }
 
 .room {
     display: block;
-    color: #777; /* Adjust to your secondary text color */
+    color: #777; 
     font-size: 0.9em;
 }
 
 .break {
-    background-color: #ffeb3b; /* Adjust to your site's warning/highlight color */
-    color: #333; /* Adjust to your text color */
+    background-color: #ffeb3b; 
+    color: #333; 
     font-style: italic;
 }
 
@@ -632,7 +631,7 @@ body.auth-body {
 .timetable-container p a {
     display: block;
     margin-top: 10px;
-    color: #337ab7; /* Adjust to your site's link color */
+    color: #337ab7; 
     text-decoration: none;
     text-align: center;
 }
