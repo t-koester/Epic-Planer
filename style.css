@@ -1,641 +1,574 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
-body {
-    background-image: url('images/tavern_background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #f0f0f0;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    font-family: 'Press Start 2P', monospace;
-    position: relative;
-    border-bottom: 1px solid #333;
-}
-
-.logo-name {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-.logo-name > div:first-child {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    width: auto;
-    margin-bottom: 10px;
-}
-
-.logo {
-    width: 40px;
-    height: auto;
-    filter: invert(1);
-}
-
-.name {
-    margin: 0;
-    flex-grow: 1;
-    font-family: 'Press Start 2P', monospace;
-    color: #f0f0f0;
-}
-
-.logo-name > div:first-child h1 {
-    margin: 0;
-    flex-grow: 1;
-    font-family: 'Press Start 2P', monospace;
-    color: #f0f0f0;
-}
-
-.top-navigation {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding-bottom: 5px;
-}
-
-.top-navigation a {
-    text-decoration: none;
-    color: #f0f0f0;
-    background-color: #333;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-family: 'Press Start 2P', monospace;
-    border: 1px solid #555;
-}
-
-.top-navigation a:hover {
-    background-color: #555;
-    border-color: #777;
-}
-
-
-.user-info {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    position: absolute;
-    top: 40px;
-    right: 40px;
-}
-
-.user-details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.level-info {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-top: 5px;
-    color: #f0f0f0;
-}
-
-.level-bar-placeholder {
-    background-color: #555;
-    width: 100px;
-    height: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.level-progress {
-    background-color: #8fbc8f;
-    height: 100%;
-    width: 50%;
-    border-radius: 4px;
-}
-
-.username {
-    font-size: 1em;
-    text-align: right;
-    color: #f0f0f0;
-}
-
-.user-info img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-    vertical-align: top;
-    filter: grayscale(100%) brightness(1.5);
-}
-
-.task-dashboard-container {
-    font-size: 1.5em;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #f0f0f0;
-    padding: 15px 20px;
-    border: 1px solid #333;
-    margin-top: 10px;
-    border-radius: 5px;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-left: 50px;
-    font-family: 'VT323';
-}
-
-.tasks-display-dashboard {
-    display: block;
-    color: #f0f0f0;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-decoration: none;
-}
-
-.task-dashboard-container {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #f0f0f0;
-    padding: 15px 20px;
-    border: 1px solid #333;
-    margin-top: 10px;
-    border-radius: 5px;
-    width: 30%;
-    margin-left: 0;
-    margin-right: auto;
-    float: left;
-}
-
-.tasks-details-button {
-    background-color: #333;
-    color: #f0f0f0;
-    border: 1px solid #555;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-family: 'VT323';
-    text-decoration: none;
-}
-
-.tasks-details-button:hover {
-    background-color: #555;
-}
-
-.upcoming-exam-container {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #f0f0f0;
-    padding: 15px 20px;
-    border: 1px solid #333;
-    margin-top: 30px;
-    border-radius: 5px;
-    width: 30%;
-    margin-left: 0;
-    float: left;
-    clear: left;
-    font-family: 'VT323';
-    text-align: center;
-}
-
-.upcoming-exam-title {
-    color: #f0f0f0;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-.exam-subject, .exam-date, .exam-time {
-    color: #ddd;
-    margin-bottom: 5px;
-    font-size: 1.5em;
-}
-
-.exam-details-button {
-    background-color: #333;
-    color: #f0f0f0;
-    border: 1px solid #555;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.5em;
-    margin-top: 10px;
-    font-family: 'VT323';
-    text-decoration: none;
-}
-
-.exam-details-button:hover {
-    background-color: #555;
-}
-
-.timetable-container {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #f0f0f0;
-    padding: 15px 20px;
-    border: 1px solid #333;
-    margin-top: -200px;
-    border-radius: 5px;
-    width: calc(100% - 52% - 2%);
-    margin-left: 7.5%;
-    float: left;
-    font-family: 'VT323';
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.timetable-container h2 {
-    color: #f0f0f0;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-}
-
-.timetable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 0.9em;
-    flex-grow: 1;
-    color: #ddd;
-}
-
-.timetable th, .timetable td {
-    border: 1px solid #555;
-    padding: 8px;
-    text-align: center;
-}
-
-.timetable th {
-    background-color: #333;
-    font-weight: bold;
-    color: #f0f0f0;
-}
-
-.timetable .time-slot {
-    font-weight: bold;
-    background-color: #555;
-    color: #f0f0f0;
-}
-
-.timetable .break {
-    background-color: #774d0f;
-    font-style: italic;
-    color: #ddd;
-}
-
-.timetable .subject {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.goto-classes-button {
-    background-color: #333;
-    color: #007bff;
-    border: 1px solid #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-family: 'VT323';
-    text-decoration: none;
-}
-
-.goto-classes-button:hover {
-    background-color: #555;
-}
-
-.add-task-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); 
-    border-radius: 5px;
-    border: 1px solid #555; 
-}
-
-#newTask {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #555; 
-    border-radius: 3px;
-    font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.1); 
-    color: #eee; 
-}
-
-.add-task-button {
-    padding: 10px 15px;
-    background-color: #555; 
-    color: #eee; 
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.add-task-button:hover {
-    background-color: #777; 
-}
-
-.add-task-container.focused {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-color: #aaa; 
-    box-shadow: 0 0 5px rgba(170, 170, 170, 0.5); 
-}
-
-#newTask::placeholder {
-    color: #aaa; 
-    background-color: transparent; 
-}
-
-body.auth-body {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    min-height: 100vh; 
-    background-image: url('images/tavern_background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0; 
-}
-
-
-.auth-container {
-    background-color: rgba(0, 0, 0, 0.7); 
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid #333; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: 300px;
-    color: #f0f0f0; 
-    font-family: 'VT323'
-}
-
-.auth-container .auth-title {
-    text-align: center;
-    color: #f0f0f0;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-}
-
-.auth-container .error-message {
-    color: #dc3545; 
-    margin-bottom: 15px;
-    text-align: center;
-    font-size: 0.9em;
-}
-
-.auth-container .success-message {
-    color: #28a745; 
-    margin-bottom: 15px;
-    text-align: center;
-    font-size: 0.9em;
-}
-
-.auth-container .form-group {
-    margin-bottom: 15px;
-}
-
-.auth-container label {
-    display: block;
-    margin-bottom: 5px;
-    color: #ddd;
-    font-size: 1em;
-}
-
-.auth-container .auth-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #555;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.1); 
-    color: #f0f0f0;
-    font-size: 1em;
-}
-
-.auth-container .auth-input::placeholder {
-    color: #aaa; 
-}
-
-.auth-container .auth-button {
-    background-color: #333; 
-    color: #007bff; 
-    padding: 10px 15px;
-    border: 1px solid #007bff; 
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.auth-container .auth-button:hover {
-    background-color: #555; 
-}
-
-.auth-container .auth-link {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #ccc;
-}
-
-.auth-container .auth-link a {
-    color: #007bff; 
-    text-decoration: none;
-}
-
-.auth-container .auth-link a:hover {
-    text-decoration: underline;
-}
-
-.error-message {
-    background-color: #fdecea;
-    color: #d9534f;
-    border: 1px solid #d9534f;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.error-message p {
-    margin: 0;
-}
-
-.error-title {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-.setup-classes-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9; 
-    border: 1px solid #ddd; 
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-}
-
-.setup-classes-container h2 {
-    text-align: center;
-    color: #333; 
-    margin-bottom: 20px;
-}
-
-.setup-timetable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.setup-timetable th, .setup-timetable td {
-    border: 1px solid #ccc; 
-    padding: 10px;
-    text-align: center;
-}
-
-.setup-timetable th {
-    background-color: #eee; 
-    font-weight: bold;
-    color: #333; 
-}
-
-.setup-timetable .time-slot {
-    background-color: #f0f0f0;
-    font-weight: bold;
-    color: #333; 
-}
-
-.setup-timetable input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 5px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    box-sizing: border-box;
-    font-size: 0.9em;
-    color: #333;
-    background-color: #fff; 
-}
-
-.setup-classes-container .save-classes-button {
-    background-color: #4CAF50; 
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.setup-classes-container .save-classes-button:hover {
-    background-color: #45a049; 
-}
-
-.setup-classes-container p a {
-    display: block;
-    margin-top: 10px;
-    color: #337ab7;
-    text-decoration: none;
-    text-align: center;
-}
-
-.setup-classes-container p a:hover {
-    text-decoration: underline;
-}
-
-
-.timetable-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9; 
-    border: 1px solid #ddd; 
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-}
-
-.timetable-title {
-    text-align: center;
-    color: #333; 
-    margin-bottom: 20px;
-}
-
-.timetable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.timetable th, .timetable td {
-    border: 1px solid #ccc; 
-    padding: 10px;
-    text-align: center;
-}
-
-.timetable th {
-    background-color: #eee; 
-    font-weight: bold;
-    color: #333; 
-}
-
-.time-slot {
-    background-color: #f0f0f0; 
-    font-weight: bold;
-    color: #333; 
-}
-
-.subject {
-    display: block;
-    font-weight: bold;
-    color: #337ab7;
-}
-
-.room {
-    display: block;
-    color: #777; 
-    font-size: 0.9em;
-}
-
-.break {
-    background-color: #ffeb3b; 
-    color: #333; 
-    font-style: italic;
-}
-
-.day {
-    vertical-align: top;
-}
-
-.timetable-container p a {
-    display: block;
-    margin-top: 10px;
-    color: #337ab7; 
-    text-decoration: none;
-    text-align: center;
-}
-
-.timetable-container p a:hover {
-    text-decoration: underline;
-}
+/* --- Google Fonts Imports --- */
+/* Imports specific fonts to be used in the design. 'Press Start 2P' gives a retro, pixelated feel,
+   while 'VT323' provides a terminal-like appearance. */
+   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+   
+   /* --- General Body Styles --- */
+   /* Sets the overall background image for the entire page, ensuring it covers the view and remains fixed.
+      It also defines the default text color for better readability on a dark background. */
+   body {
+       background-image: url('images/tavern_background.jpg');
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       color: #f0f0f0;
+   }
+   
+   /* --- Header Section Styles --- */
+   /* Styles the main header of the application, including its layout, background, padding, and font.
+      It uses flexbox for internal alignment and has a subtle bottom border. */
+   .header {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       background-color: rgba(0, 0, 0, 0.6);
+       padding: 20px;
+       font-family: 'Press Start 2P', monospace;
+       position: relative; /* Allows for absolute positioning of child elements like user info */
+       border-bottom: 1px solid #333;
+   }
+   
+   /* --- Logo and Site Name in Header --- */
+   /* Controls the alignment and spacing of the logo and the site's name within the header,
+      ensuring they are visually grouped. */
+   .logo-name {
+       display: flex;
+       align-items: center;
+       padding: 0;
+       margin-bottom: 10px;
+       width: 100%;
+   }
+   
+   .logo-name > div:first-child {
+       display: flex;
+       align-items: center;
+       gap: 30px;
+       width: auto;
+       margin-bottom: 10px;
+   }
+   
+   .logo {
+       width: 40px;
+       height: auto;
+       filter: invert(1); /* Inverts the logo colors for visibility on dark backgrounds */
+   }
+   
+   .name,
+   .logo-name > div:first-child h1 {
+       margin: 0;
+       flex-grow: 1;
+       font-family: 'Press Start 2P', monospace;
+       color: #f0f0f0;
+   }
+   
+   /* --- Top Navigation Bar --- */
+   /* Styles the primary navigation links, including their layout, spacing, and visual appearance
+      (background, borders, and hover effects). */
+   .top-navigation {
+       display: flex;
+       gap: 10px;
+       flex-wrap: wrap;
+       padding-bottom: 5px;
+   }
+   
+   .top-navigation a {
+       text-decoration: none;
+       color: #f0f0f0;
+       background-color: #333;
+       padding: 8px 15px;
+       border-radius: 20px;
+       font-family: 'Press Start 2P', monospace;
+       border: 1px solid #555;
+   }
+   
+   .top-navigation a:hover {
+       background-color: #555;
+       border-color: #777;
+   }
+   
+   /* --- User Information Section --- */
+   /* Positions and styles the user's avatar, username, and level progress bar within the header.
+      This section is absolutely positioned for flexible placement. */
+   .user-info {
+       display: flex;
+       align-items: flex-start;
+       gap: 10px;
+       position: absolute;
+       top: 40px;
+       right: 40px;
+   }
+   
+   .user-details {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end;
+   }
+   
+   .level-info {
+       display: flex;
+       align-items: center;
+       gap: 5px;
+       margin-top: 5px;
+       color: #f0f0f0;
+   }
+   
+   .level-bar-placeholder {
+       background-color: #555;
+       width: 100px;
+       height: 8px;
+       border-radius: 4px;
+       overflow: hidden;
+   }
+   
+   .level-progress {
+       background-color: #8fbc8f; /* Green color for the progress bar fill */
+       height: 100%;
+       width: 50%; /* Example width, dynamically set by PHP */
+       border-radius: 4px;
+   }
+   
+   .username {
+       font-size: 1em;
+       text-align: right;
+       color: #f0f0f0;
+   }
+   
+   .user-info img {
+       width: 40px;
+       height: 40px;
+       object-fit: cover;
+       border-radius: 50%; /* Makes the image circular */
+       vertical-align: top;
+       filter: grayscale(100%) brightness(1.5);
+   }
+   
+   /* --- Dashboard Section Containers (Tasks, Exams, Timetable) --- */
+   /* Defines common styles for the various dashboard widgets, including background, borders,
+      padding, and font family. Each widget then has specific positioning and sizing. */
+   .task-dashboard-container,
+   .upcoming-exam-container,
+   .timetable-container {
+       background-color: rgba(0, 0, 0, 0.7);
+       color: #f0f0f0;
+       padding: 15px 20px;
+       border: 1px solid #333;
+       margin-top: 10px;
+       border-radius: 5px;
+       font-family: 'VT323';
+   }
+   
+   /* --- Task Dashboard Specific Styles --- */
+   /* Sets the size, position (floating left), and text alignment for the task summary widget. */
+   .task-dashboard-container {
+       font-size: 1.5em;
+       width: 30%;
+       margin-left: 0;
+       margin-right: auto;
+       float: left;
+       text-align: center;
+   }
+   
+   .tasks-display-dashboard {
+       display: block;
+       color: #f0f0f0;
+       font-weight: bold;
+       margin-bottom: 10px;
+       text-decoration: none;
+   }
+   
+   /* --- Upcoming Exam Container Specific Styles --- */
+   /* Positions and sizes the upcoming exam widget, ensuring it clears previous floated elements. */
+   .upcoming-exam-container {
+       margin-top: 30px;
+       width: 30%;
+       margin-left: 0;
+       float: left;
+       clear: left; /* Ensures it starts on a new line below previous floated elements */
+       text-align: center;
+   }
+   
+   .upcoming-exam-title {
+       color: #f0f0f0;
+       margin-top: 0;
+       margin-bottom: 10px;
+       font-size: 2em;
+       font-weight: bold;
+   }
+   
+   .exam-subject, .exam-date, .exam-time {
+       color: #ddd;
+       margin-bottom: 5px;
+       font-size: 1.5em;
+   }
+   
+   /* --- Dashboard Timetable Container Specific Styles --- */
+   /* Defines the layout and positioning for the timetable widget on the dashboard,
+      including its negative top margin to align with other elements. */
+   .timetable-container {
+       width: calc(100% - 52% - 2%); /* Calculates width based on other elements to fill space */
+       margin-left: 7.5%;
+       float: left;
+       margin-top: -200px; /* Pulls the container upwards */
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+   }
+   
+   .timetable-container h2 {
+       color: #f0f0f0;
+       margin-top: 0;
+       margin-bottom: 10px;
+       font-size: 1.5em;
+       font-weight: bold;
+       text-align: center;
+       width: 100%;
+   }
+   
+   /* --- Table Styles (used for Timetable) --- */
+   /* General styling for tables, including cell borders, padding, and text alignment. */
+   .timetable {
+       width: 100%;
+       border-collapse: collapse;
+       margin-top: 10px;
+       font-size: 0.9em;
+       flex-grow: 1;
+       color: #ddd;
+   }
+   
+   .timetable th, .timetable td {
+       border: 1px solid #555;
+       padding: 8px;
+       text-align: center;
+   }
+   
+   .timetable th {
+       background-color: #333;
+       font-weight: bold;
+       color: #f0f0f0;
+   }
+   
+   .timetable .time-slot {
+       font-weight: bold;
+       background-color: #555;
+       color: #f0f0f0;
+   }
+   
+   .timetable .break {
+       background-color: #774d0f; /* Specific background for break times */
+       font-style: italic;
+       color: #ddd;
+   }
+   
+   .timetable .subject {
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis; /* Adds "..." for overflowing text */
+   }
+   
+   /* --- Button Styles (Dashboard and Forms) --- */
+   /* Defines the appearance and hover effects for various action buttons across the dashboard and forms. */
+   .tasks-details-button,
+   .exam-details-button,
+   .goto-classes-button,
+   .add-task-button,
+   .auth-container .auth-button,
+   .setup-classes-container .save-classes-button {
+       background-color: #333;
+       color: #f0f0f0; /* Default text color */
+       border: 1px solid #555; /* Default border color */
+       padding: 10px 20px;
+       border-radius: 5px;
+       cursor: pointer;
+       font-size: 1em;
+       margin-top: 15px;
+       margin-bottom: 10px;
+       font-family: 'VT323';
+       text-decoration: none;
+       transition: background-color 0.3s ease; /* Smooth transition for hover */
+   }
+   
+   /* Specific button color overrides */
+   .exam-details-button {
+       font-size: 1.5em;
+       margin-top: 10px;
+   }
+   
+   .goto-classes-button,
+   .auth-container .auth-button {
+       color: #007bff; /* Blue text for specific buttons */
+       border: 1px solid #007bff; /* Blue border for specific buttons */
+   }
+   
+   .setup-classes-container .save-classes-button {
+       background-color: #4CAF50; /* Green background for save button */
+       color: white;
+       border: none;
+   }
+   
+   /* Hover effects */
+   .tasks-details-button:hover,
+   .exam-details-button:hover,
+   .goto-classes-button:hover,
+   .add-task-button:hover,
+   .auth-container .auth-button:hover {
+       background-color: #555;
+   }
+   
+   .setup-classes-container .save-classes-button:hover {
+       background-color: #45a049;
+   }
+   
+   /* --- Add Task Input and Container --- */
+   /* Styles the input field and its container for adding new tasks, including focus states
+      and placeholder text. */
+   .add-task-container {
+       display: flex;
+       gap: 10px;
+       margin-top: 20px;
+       margin-bottom: 20px;
+       padding: 10px;
+       background-color: rgba(0, 0, 0, 0.7);
+       border-radius: 5px;
+       border: 1px solid #555;
+   }
+   
+   #newTask {
+       flex-grow: 1;
+       padding: 10px;
+       border: 1px solid #555;
+       border-radius: 3px;
+       font-size: 16px;
+       background-color: rgba(255, 255, 255, 0.1);
+       color: #eee;
+   }
+   
+   .add-task-container.focused {
+       border-color: #aaa;
+       box-shadow: 0 0 5px rgba(170, 170, 170, 0.5);
+   }
+   
+   #newTask::placeholder {
+       color: #aaa;
+       background-color: transparent;
+   }
+   
+   /* --- Authentication Pages (Login/Register) General Styles --- */
+   /* These styles center the authentication containers on the page and define their
+      general appearance like background, padding, and borders. */
+   body.auth-body {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       background-image: url('images/tavern_background.jpg');
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       margin: 0;
+   }
+   
+   .auth-container {
+       background-color: rgba(0, 0, 0, 0.7);
+       padding: 30px;
+       border-radius: 8px;
+       border: 1px solid #333;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+       width: 300px;
+       color: #f0f0f0;
+       font-family: 'VT323';
+   }
+   
+   /* --- Authentication Form Elements --- */
+   /* Styles for titles, input fields, labels, and messages within the login and registration forms. */
+   .auth-container .auth-title {
+       text-align: center;
+       color: #f0f0f0;
+       margin-bottom: 20px;
+       font-size: 1.8em;
+   }
+   
+   .auth-container .error-message {
+       color: #dc3545; /* Red for errors */
+       margin-bottom: 15px;
+       text-align: center;
+       font-size: 0.9em;
+   }
+   
+   .auth-container .success-message {
+       color: #28a745; /* Green for success */
+       margin-bottom: 15px;
+       text-align: center;
+       font-size: 0.9em;
+   }
+   
+   .auth-container .form-group {
+       margin-bottom: 15px;
+   }
+   
+   .auth-container label {
+       display: block;
+       margin-bottom: 5px;
+       color: #ddd;
+       font-size: 1em;
+   }
+   
+   .auth-container .auth-input {
+       width: 100%;
+       padding: 10px;
+       border: 1px solid #555;
+       border-radius: 4px;
+       box-sizing: border-box;
+       margin-bottom: 10px;
+       background-color: rgba(255, 255, 255, 0.1);
+       color: #f0f0f0;
+       font-size: 1em;
+   }
+   
+   .auth-container .auth-input::placeholder {
+       color: #aaa;
+   }
+   
+   .auth-container .auth-link {
+       text-align: center;
+       margin-top: 20px;
+       font-size: 0.9em;
+       color: #ccc;
+   }
+   
+   .auth-container .auth-link a {
+       color: #007bff;
+       text-decoration: none;
+   }
+   
+   .auth-container .auth-link a:hover {
+       text-decoration: underline;
+   }
+   
+   /* --- Global Error Message Styling --- */
+   /* Provides a distinct visual style for general error messages across the application. */
+   .error-message {
+       background-color: #fdecea;
+       color: #d9534f;
+       border: 1px solid #d9534f;
+       padding: 15px;
+       margin-bottom: 15px;
+       border-radius: 4px;
+       font-weight: bold;
+   }
+   
+   .error-message p {
+       margin: 0;
+   }
+   
+   .error-title {
+       font-size: 1.2em;
+       margin-bottom: 5px;
+   }
+   
+   /* --- Setup Classes Page Specific Styles --- */
+   /* Styles for the page where users can input and manage their class timetable. */
+   .setup-classes-container {
+       max-width: 800px;
+       margin: 20px auto;
+       padding: 20px;
+       background-color: #f9f9f9;
+       border: 1px solid #ddd;
+       border-radius: 5px;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+   
+   .setup-classes-container h2 {
+       text-align: center;
+       color: #333;
+       margin-bottom: 20px;
+   }
+   
+   .setup-timetable {
+       width: 100%;
+       border-collapse: collapse;
+       margin-top: 10px;
+   }
+   
+   .setup-timetable th, .setup-timetable td {
+       border: 1px solid #ccc;
+       padding: 10px;
+       text-align: center;
+   }
+   
+   .setup-timetable th {
+       background-color: #eee;
+       font-weight: bold;
+       color: #333;
+   }
+   
+   .setup-timetable .time-slot {
+       background-color: #f0f0f0;
+       font-weight: bold;
+       color: #333;
+   }
+   
+   .setup-timetable input[type="text"] {
+       width: 100%;
+       padding: 8px;
+       margin-bottom: 5px;
+       border: 1px solid #ddd;
+       border-radius: 3px;
+       box-sizing: border-box;
+       font-size: 0.9em;
+       color: #333;
+       background-color: #fff;
+   }
+   
+   .setup-classes-container p a {
+       display: block;
+       margin-top: 10px;
+       color: #337ab7;
+       text-decoration: none;
+       text-align: center;
+   }
+   
+   .setup-classes-container p a:hover {
+       text-decoration: underline;
+   }
+   
+   /* --- Timetable Display Specific Styles --- */
+   /* Styles for how the timetable is displayed, distinguishing between subject, room, and break times.
+      Note: Some classes here (`timetable-container`, `timetable`, `timetable th`, `timetable td`, `time-slot`, `break`)
+      are duplicates of those in the dashboard section but are included here for clarity if this CSS
+      were to be modularized or used on a dedicated timetable page with different base styles. */
+   .timetable-title {
+       text-align: center;
+       color: #333;
+       margin-bottom: 20px;
+   }
+   
+   .subject {
+       display: block;
+       font-weight: bold;
+       color: #337ab7;
+   }
+   
+   .room {
+       display: block;
+       color: #777;
+       font-size: 0.9em;
+   }
+   
+   .day {
+       vertical-align: top;
+   }
+   
+   .timetable-container p a {
+       display: block;
+       margin-top: 10px;
+       color: #337ab7;
+       text-decoration: none;
+       text-align: center;
+   }
+   
+   .timetable-container p a:hover {
+       text-decoration: underline;
+   }
+   

@@ -10,8 +10,10 @@
     <div class="auth-container register-container">
         <h1 class="auth-title">Registrierung</h1>
         <?php
+        // Check for an 'error' parameter in the URL. If present, display a corresponding error message.
         if (isset($_GET['error'])) {
-            $error = htmlspecialchars($_GET['error']);
+            $error = htmlspecialchars($_GET['error']); // Sanitize the error message to prevent XSS attacks.
+            // Display specific error messages based on the 'error' value.
             if ($error === 'emptyfields') {
                 echo '<p class="error-message">Bitte fülle alle Felder aus.</p>';
             } elseif ($error === 'invalidusername') {
@@ -27,6 +29,7 @@
             } elseif ($error === 'registrationfailed') {
                 echo '<p class="error-message">Registrierung fehlgeschlagen. Bitte versuche es später erneut.</p>';
             }
+        // Check for a 'success' parameter in the URL. If present, display a success message.
         } elseif (isset($_GET['success'])) {
             echo '<p class="success-message">Registrierung erfolgreich! Du kannst dich nun <a href="login.php">einloggen</a>.</p>';
         }

@@ -22,6 +22,7 @@
 - ~~Make a place to save info (database).~~ *Done*
 - ~~Make login and sign-up.~~ *Done*
 - ~~Start making the task manager.~~ *Done*
+- Add comments to the Code ASAP
 - Make a level system.
 - Let users plan their classes.
 - Let users put exams on a calendar.

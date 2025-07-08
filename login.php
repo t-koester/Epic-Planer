@@ -10,8 +10,10 @@
     <div class="auth-container login-container">
         <h1 class="auth-title">Login</h1>
         <?php
+        // Check if an error message is present in the URL query string
         if (isset($_GET['error'])) {
-            $error = htmlspecialchars($_GET['error']);
+            $error = htmlspecialchars($_GET['error']); // Sanitize the error message
+            // Display specific error messages based on the 'error' parameter
             if ($error === 'emptyfields') {
                 echo '<p class="error-message">Bitte fülle alle Felder aus.</p>';
             } elseif ($error === 'wrongpassword') {
@@ -39,4 +41,4 @@
         </div>
     </div>
 </body>
-</html>
+</html> 
