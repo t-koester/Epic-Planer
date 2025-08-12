@@ -1,5 +1,9 @@
 # Epic Planner
 
+**Currently Abandoned**
+Tis was a nice project to learn but i kinda lost the point to fisnish it. 
+I Learned new things in Backend Logic & Data Management but im now going to move on to new projects.
+
 **What's the Point?**
 - Small project to learn PHP, HTML, JS, and CSS better.
 - Maybe help my studying.
